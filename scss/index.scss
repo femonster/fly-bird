@@ -1,0 +1,122 @@
+body,
+html,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin allbird {
+    background: url(../img/allbird.png) no-repeat;
+}
+
+@mixin down_bird1 {
+    height: 30px;
+    width: 40px;
+    background-position: 0 0;
+}
+
+@mixin up_bird0 {
+    height: 29px;
+    width: 40px;
+    background-position: 0 -41px;
+}
+
+@mixin up_bird1 {
+    height: 29px;
+    width: 40px;
+    background-position: 0 -80px;
+}
+
+@mixin bird0 {
+    height: 26px;
+    width: 40px;
+    background-position: 0 -121px;
+}
+
+@mixin bird1 {
+    height: 26px;
+    width: 40px;
+    background-position: 0 -156px;
+}
+
+@mixin down_bird0 {
+    height: 30px;
+    width: 40px;
+    background-position: 0 -191px;
+}
+
+.c-bg {
+    width: 343px;
+    height: 480px;
+    margin: 50px auto 0;
+    background: url('../img/bg.jpg') no-repeat;
+    position: relative;
+    overflow: hidden;
+    .c-title {
+        width: 236px;
+        height: 77px;
+        background-image: url(../img/head.jpg);
+        position: absolute;
+        left: 53px;
+        top: 100px;
+        animation: shaking 0.5s linear infinite alternate;
+        #headBird {
+            @include allbird;
+            @include bird0;
+            float: right;
+            margin-top: 25px;
+            animation: flying 0.5s step-start infinite alternate;
+        }
+    }
+    .c-sbtn {
+        width: 85px;
+        height: 29px;
+        padding: 0;
+        margin: 0;
+        background-image: url(../img/start.jpg);
+        position: absolute;
+        left: 129px;
+        top: 250px;
+    }
+    .c-grass {
+        height: 14px;
+        width: 343px;
+        background-image: url(../img/banner.jpg);
+        position: absolute;
+        top: 423px;
+        animation: grassMove 4s linear infinite;
+    }
+    #grassLand2 {
+        left: 343px;
+    }
+}
+
+@keyframes shaking {
+    from {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(-10px)
+    }
+}
+
+@keyframes flying {
+    0% {
+        background-position: 0 -121px;
+    }
+    50% {
+        background-position: 0 -156px;
+    }
+    100% {
+        background-position: 0 -121px;
+    }
+}
+
+@keyframes grassMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-343px);
+    }
+}

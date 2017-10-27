@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../img" ImageName="allbird" IsPhone="false" SpriteImgFileType="Png" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="down_bird1.png" LocationX="0" LocationY="0" />
+    <Sprite Path="up_bird0.png" LocationX="0" LocationY="41" />
+    <Sprite Path="up_bird1.png" LocationX="0" LocationY="80" />
+    <Sprite Path="bird0.png" LocationX="0" LocationY="121" />
+    <Sprite Path="bird1.png" LocationX="0" LocationY="156" />
+    <Sprite Path="down_bird0.png" LocationX="0" LocationY="191" />
+  </SpriteList>
+</SpriteFile>
