@@ -89,6 +89,38 @@ div {
     #grassLand2 {
         left: 343px;
     }
+    .pipe{
+        width: 62px;
+        position: absolute;
+        animation: pipeMove 4s linear;
+        div{
+            width: 100%;  
+        }
+    }
+    .p-up{
+        top: 0;
+        // left:300px;
+        .up-one{
+            // height: 30px;
+            background: url("../img/up_mod.png") repeat-y;
+        }
+        .up-two{
+            height: 60px;
+            background: url("../img/up_pipe.png") no-repeat;
+        }
+    }
+    .p-down{
+        bottom: 57px;
+        // left:300px;
+        .down-one{
+            height: 60px;
+            background: url("../img/down_pipe.png") no-repeat;
+        }
+        .down-two{
+            // height: 60px;
+            background: url("../img/down_mod.png") repeat-y;
+        }
+    }
 }
 
 @keyframes shaking {
@@ -117,6 +149,15 @@ div {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-343px);
+        transform: translateX(-410px);
+    }
+}
+
+@keyframes pipeMove{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-410px);
     }
 }

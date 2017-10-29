@@ -7,6 +7,8 @@ $("#startBtn").addEventListener("click", function() {
     obird.showBird(pobj);
     obird.down();
     obird.wings();
+    var opipe = new Pipe(pobj);
+    opipe.createPipe(pobj);
     pobj.onclick = function() {
         obird.speed = -8;
     }
