@@ -6,7 +6,7 @@ body, html, div { margin: 0; padding: 0; }
 .c-bg .c-sbtn { width: 85px; height: 29px; padding: 0; margin: 0; background-image: url(../img/start.jpg); position: absolute; left: 129px; top: 250px; }
 .c-bg .c-grass { height: 14px; width: 343px; background-image: url(../img/banner.jpg); position: absolute; top: 423px; animation: grassMove 4s linear infinite; }
 .c-bg #grassLand2 { left: 343px; }
-.c-bg .pipe { width: 62px; position: absolute; animation: pipeMove 4s linear; }
+.c-bg .pipe { width: 62px; position: absolute; }
 .c-bg .pipe div { width: 100%; }
 .c-bg .p-up { top: 0; }
 .c-bg .p-up .up-one { background: url("../img/up_mod.png") repeat-y; }
@@ -21,6 +21,4 @@ body, html, div { margin: 0; padding: 0; }
   50% { background-position: 0 -156px; }
   100% { background-position: 0 -121px; } }
 @keyframes grassMove { from { transform: translateX(0); }
-  to { transform: translateX(-410px); } }
-@keyframes pipeMove { from { transform: translateX(0); }
-  to { transform: translateX(-410px); } }
+  to { transform: translateX(-400px); } }
