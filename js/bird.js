@@ -12,8 +12,9 @@ function Bird(w, h, l, t, s) {
             // var odiv = document.createElement("div");
             this.odiv.style.width = this.width + "px";
             this.odiv.style.height = this.height + "px";
-            this.odiv.style.backgroundImage = "url(img/bird0.png)";
+            this.odiv.style.backgroundImage = "url(img/allbird.png)";
             this.odiv.style.backgroundRepeat = "no-repeat";
+            this.odiv.style.backgroundPosition = "0 -121px"
             this.odiv.style.position = "absolute";
             this.odiv.style.left = this.left + "px";
             this.odiv.style.top = this.top + "px";
@@ -32,7 +33,7 @@ function Bird(w, h, l, t, s) {
                 if (_this.odiv.offsetTop >= 395) {
                     _this.speed = 0;
                     clearInterval(_this.flyTimer);
-                    clearInterval(this.wingTimer);
+                    clearInterval(_this.wingTimer);
                 }
                 if (_this.speed > 12) {
                     _this.speed = 12;
@@ -41,19 +42,19 @@ function Bird(w, h, l, t, s) {
         };
         Bird.prototype.wings = function() {
             var _this = this,
-                aup = ["url(img/up_bird0.png)", "url(img/up_bird1.png)"],
-                adown = ["url(img/down_bird0.png)", "url(img/down_bird1.png)"],
+                aup = ["0 -41px", "0 -80px"],
+                adown = ["0 -191px", "0 0"],
                 i = 0,
                 j = 0;
             _this.wingTimer = setInterval(wing, 120);
 
             function wing() {
                 if (_this.speed > 0) {
-                    _this.odiv.style.backgroundImage = adown[i++];
+                    _this.odiv.style.backgroundPosition = adown[i++];
                     if (i == 2) { i = 0 }
                 }
                 if (_this.speed < 0) {
-                    _this.odiv.style.backgroundImage = aup[j++];
+                    _this.odiv.style.backgroundPosition = aup[j++];
                     if (j == 2) { j = 0 }
                 }
             }

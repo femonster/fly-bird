@@ -69,13 +69,13 @@ div {
         }
     }
     .c-sbtn {
-        width: 85px;
-        height: 29px;
+        width: 91px;
+        height: 34px;
         padding: 0;
         margin: 0;
         background-image: url(../img/start.jpg);
         position: absolute;
-        left: 129px;
+        left: 121px;
         top: 250px;
     }
     .c-grass {
@@ -84,6 +84,8 @@ div {
         background-image: url(../img/banner.jpg);
         position: absolute;
         top: 423px;
+    }
+    .grass-move {
         animation: grassMove 4s linear infinite;
     }
     #grassLand2 {
@@ -96,28 +98,56 @@ div {
             width: 100%;
         }
     }
-    .p-up {
-        top: 0;
-        // left: 300px;
-        .up-one {
-            // height: 30px;
-            background: url("../img/up_mod.png") repeat-y;
-        }
-        .up-two {
-            height: 60px;
-            background: url("../img/up_pipe.png") no-repeat;
-        }
+    #score {
+        position: absolute;
+        left: 130px;
+        top: 50px;
+        z-index: 1;
     }
-    .p-down {
-        bottom: 57px;
-        // left: 300px;
-        .down-one {
-            height: 60px;
-            background: url("../img/down_pipe.png") no-repeat;
+    #score div {
+        height: 39px;
+        width: 28px;
+        float: left;
+        background-image: url(../img/0.jpg);
+        display: none;
+    }
+    .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #fff;
+        opacity: 0.5;
+        z-index: 99;
+        display: none;
+    }
+    #overWrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        vertical-align: bottom;
+        display: none;
+        .end {
+            width: 221px;
+            height: 40px;
+            background: url("../img/game_over.jpg") no-repeat;
         }
-        .down-two {
-            // height: 30px;
-            background: url("../img/down_mod.png") repeat-y;
+        #again {
+            margin-top: 20px;
+            width: 100px;
+            height: 37px;
+            background: url("../img/ok.jpg") no-repeat;
+        }
+        #scorebtn {
+            margin-top: 20px;
+            width: 100px;
+            height: 37px;
+            background: url("../img/score.jpg") no-repeat;
+            background-size: 100%;
+            margin-left: 16px;
         }
     }
 }
@@ -151,12 +181,3 @@ div {
         transform: translateX(-400px);
     }
 }
-
-// @keyframes pipeMove{
-//     from{
-//         transform: translateX(0);
-//     }
-//     to{
-//         transform: translateX(-410px);
-//     }
-// }

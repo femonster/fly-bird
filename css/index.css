@@ -3,17 +3,19 @@ body, html, div { margin: 0; padding: 0; }
 .c-bg { width: 343px; height: 480px; margin: 50px auto 0; background: url("../img/bg.jpg") no-repeat; position: relative; overflow: hidden; }
 .c-bg .c-title { width: 236px; height: 77px; background-image: url(../img/head.jpg); position: absolute; left: 53px; top: 100px; animation: shaking 0.5s linear infinite alternate; }
 .c-bg .c-title #headBird { background: url(../img/allbird.png) no-repeat; height: 26px; width: 40px; background-position: 0 -121px; float: right; margin-top: 25px; animation: flying 0.5s step-start infinite alternate; }
-.c-bg .c-sbtn { width: 85px; height: 29px; padding: 0; margin: 0; background-image: url(../img/start.jpg); position: absolute; left: 129px; top: 250px; }
-.c-bg .c-grass { height: 14px; width: 343px; background-image: url(../img/banner.jpg); position: absolute; top: 423px; animation: grassMove 4s linear infinite; }
+.c-bg .c-sbtn { width: 91px; height: 34px; padding: 0; margin: 0; background-image: url(../img/start.jpg); position: absolute; left: 121px; top: 250px; }
+.c-bg .c-grass { height: 14px; width: 343px; background-image: url(../img/banner.jpg); position: absolute; top: 423px; }
+.c-bg .grass-move { animation: grassMove 4s linear infinite; }
 .c-bg #grassLand2 { left: 343px; }
 .c-bg .pipe { width: 62px; position: absolute; }
 .c-bg .pipe div { width: 100%; }
-.c-bg .p-up { top: 0; }
-.c-bg .p-up .up-one { background: url("../img/up_mod.png") repeat-y; }
-.c-bg .p-up .up-two { height: 60px; background: url("../img/up_pipe.png") no-repeat; }
-.c-bg .p-down { bottom: 57px; }
-.c-bg .p-down .down-one { height: 60px; background: url("../img/down_pipe.png") no-repeat; }
-.c-bg .p-down .down-two { background: url("../img/down_mod.png") repeat-y; }
+.c-bg #score { position: absolute; left: 130px; top: 50px; z-index: 1; }
+.c-bg #score div { height: 39px; width: 28px; float: left; background-image: url(../img/0.jpg); display: none; }
+.c-bg .shadow { position: absolute; top: 0; left: 0; bottom: 0; right: 0; background-color: #fff; opacity: 0.5; z-index: 99; display: none; }
+.c-bg #overWrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 100; vertical-align: bottom; display: none; }
+.c-bg #overWrap .end { width: 221px; height: 40px; background: url("../img/game_over.jpg") no-repeat; }
+.c-bg #overWrap #again { margin-top: 20px; width: 100px; height: 37px; background: url("../img/ok.jpg") no-repeat; }
+.c-bg #overWrap #scorebtn { margin-top: 20px; width: 100px; height: 37px; background: url("../img/score.jpg") no-repeat; background-size: 100%; margin-left: 16px; }
 
 @keyframes shaking { from { transform: translateY(0); }
   to { transform: translateY(-10px); } }
