@@ -33,7 +33,7 @@ function randomPipe(bird, pobj) {
             pipeArr.push(newPipe);
         }
 
-        // 删除已经移出视野的广告
+        // 删除已经移出视野的管道
         if (pipeArr[0].downWrap.offsetLeft < -50) {
             pobj.removeChild(pipeArr[0].upWrap);
             pobj.removeChild(pipeArr[0].downWrap);
